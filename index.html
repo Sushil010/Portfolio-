@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <title>Document</title>
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@v0.177.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.177.0/examples/jsm/"
+  }
+}
+</script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/threejs-orbit-controls@1.0.3/dist/threejs-orbit-controls.umd.min.js"></script> -->
+  </head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-text">
+                <img src="assets/right-arrow.png" alt=">" class="loader-arrow">
+                <span>Loading</span><span class="loader-dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </span>
+                <span class="blinking-cursor">_</span>
+            </div>
+            <div class="loader-progress">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cursor">
+
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <button id="backToTop">↑</button>
+
+<div id="main" class="main-content" style="opacity: 0; visibility: hidden;">
+
+    <div class="top">
+        <div class="right">
+            <!-- Hamburger Menu Button -->
+            <button id="hamburger" class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <nav id="nav" class="nav-menu">
+                <ul>
+                    <li><a class="sm-text" href="#about">About Me</a></li>
+                    <li><a class="sm-text" href="#projects">Projects</a></li>
+                    <li><a class="sm-text" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="left">
+            <h1 class="sm-text">
+                <img src="assets/right-arrow.png" alt=">" class="nav-arrow">
+                home<span class="blinking-cursor">_</span>
+            </h1><br>
+            
+        </div>
+
+    </div>
+
+   <div id="home" class="hero">
+        <div id="elems">
+            <div class="left">
+                <p class="big-text">Machine Learning<br>Engineer</p>
+            </div>
+            <div id="right">
+                <p class="sm-text">Focused on computer vision, real-time AI systems,<br>and data-driven solutions<br>for social impact</p>
+            </div>  
+        </div>
+          
+   </div>
+
+
+<div class="lines">
+  <svg viewBox="0 0 1000 160" preserveAspectRatio="none" width="100%" height="160">
+    <path id="wave" d="M 0 80 Q 500 80 1000 80" stroke="white" stroke-width="1.5" fill="transparent" />
+  </svg>
+</div>
+
+<div id="about" class="about-me">
+
+  <p class="sm-text">
+    I am Sushil Sharma, a Machine Learning Engineer and Data Analyst specializing in AI/ML and computer vision. I build real-time ML systems with 90%+ accuracy, efficient data pipelines, and FastAPI solutions that cut processing time by 30%.
+
+  </p>
+
+</div>
+
+<div class="lines">
+  <svg viewBox="0 0 1000 160" preserveAspectRatio="none" width="100%" height="160">
+    <path id="wave" d="M 0 80 Q 500 80 1000 80" stroke="white" stroke-width="1.5" fill="transparent" />
+  </svg>
+</div>
+
+<div class="contents">
+    <div id="heading">
+        <div class="sm-text">
+        <p>Languages and Frameworks</p>
+    </div>
+    </div>
+    
+  <div class="marqs" id="first">
+    <div class="imgs-wrapper">
+      <div class="img-box"><img src="assets/languages/gsap.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/rct.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/js.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/c.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/c++.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/sql.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/bi.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/python.svg" alt=""></div>
+       <div class="img-box"><img src="assets/languages/gsap.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/rct.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/js.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/c.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/c++.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/sql.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/bi.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/python.svg" alt=""></div>
+      <!-- duplicate for infinite effect -->
+      <div class="img-box"><img src="assets/languages/gsap.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/rct.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/js.svg" alt=""></div>
+    </div>
+  </div>
+
+  <div class="marqs" id="second">
+    <div class="imgs-wrapper">
+      <div class="img-box"><img src="assets/languages/tailwind.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/opencv.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/jupyter.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/selenium.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/git.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/django.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/streamlit.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/tailwind.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/opencv.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/jupyter.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/selenium.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/git.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/django.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/streamlit.svg" alt=""></div>
+      <!-- duplicate for infinite effect -->
+      <div class="img-box"><img src="assets/languages/tailwind.svg" alt=""></div>
+      <div class="img-box"><img src="assets/languages/opencv.svg" alt=""></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="lines">
+  <svg viewBox="0 0 1000 160" preserveAspectRatio="none" width="100%" height="160">
+    <path id="wave" d="M 0 80 Q 500 80 1000 80" stroke="white" stroke-width="1.5" fill="transparent" />
+  </svg>
+</div>
+
+<div id="projects" class="projects">
+<div id="title">
+    <div class="sm-text">
+        Frontend Projects
+    </div>
+</div>
+  <div id="cyl">
+    <canvas class="canvas">
+      
+    </canvas>
+  </div>
+
+</div>
+<div class="lines">
+  <svg viewBox="0 0 1000 160" preserveAspectRatio="none" width="100%" height="160">
+    <path id="wave" d="M 0 80 Q 500 80 1000 80" stroke="white" stroke-width="1.5" fill="transparent" />
+  </svg>
+</div>
+
+
+
+
+<!-- <div id="page">
+  <canvas></canvas>
+</div> -->
+
+<section class="projects-section">
+        <div class="section-grid">
+            <!-- Technical Projects Column -->
+            <div class="technical-projects">
+                <h2 class="section-title">Technical Projects</h2>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">ML Composed DDOS Detector</h3>
+                        <div class="project-meta">
+                            <span class="project-date">2023</span>
+                        </div>
+                    </div>
+                    <ul class="project-description">
+                        <li>Implemented a random forest algorithm achieving 89% accuracy in detecting distributed denial-of-service attacks</li>
+                        <li>Designed seeder and feeder scripts for data pipeline management</li>
+                        <li>Built three.js designed UI globe for real-time attack visualization</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Real-Time Drowsiness Detection System</h3>
+                        <div class="project-meta">
+                            <span class="project-date">2023</span>
+                            <span class="project-status">• Published</span>
+                        </div>
+                    </div>
+                    <ul class="project-description">
+                        <li>Combined computer vision techniques with XGBoost algorithm to achieve 94% accuracy detection in real-time conditions</li>
+                        <li>Published research in ICT-CEEL 2023 Conference and peer-reviewed journal</li>
+                        <li>Developed alert system for driver safety applications</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Dual Layer Approach for LLM Hallucination Reduction</h3>
+                        <div class="project-meta">
+                            <span class="project-status">Ongoing</span>
+                        </div>
+                    </div>
+                    <ul class="project-description">
+                        <li>Implementing a dual layer approach with pre-generation and post-verification layers to tackle hallucination in Large Language Models</li>
+                        <li>Exploring novel architectural patterns for improving LLM reliability</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">NLP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience Column -->
+            <div class="work-experience">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="work-card">
+                    <div class="project-header">
+                        <h3 class="work-title">ETL Associate</h3>
+                        <div class="project-meta">
+                            <span class="project-date">Recent</span>
+                        </div>
+                    </div>
+                    <ul class="work-description">
+                        <li>Built Selenium/BS4 scraping pipelines for automated auction data extraction, achieving 40% efficiency improvement</li>
+                        <li>Developed Python/Pandas/NumPy ETL workflows for processing and preparing machine learning datasets</li>
+                        <li>Developed FastAPI APIs with Matplotlib/Seaborn visualization capabilities, reducing data processing time by 30% through modular automation</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">BeautifulSoup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+<div class="lines">
+  <svg viewBox="0 0 1000 160" preserveAspectRatio="none" width="100%" height="160">
+    <path id="wave" d="M 0 80 Q 500 80 1000 80" stroke="white" stroke-width="1.5" fill="transparent" />
+  </svg>
+</div>
+
+<section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Connect</h2>
+                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            </div>
+
+            <div class="form-wrapper">
+                <div class="bracket-left"></div>
+                <div class="bracket-right"></div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="send-button">Send</button>
+                </form>
+                
+                <div id="terminal-message" class="terminal-message">
+                    <span class="terminal-prompt">
+                        <img src="assets/right-arrow.png" alt=">" class="terminal-arrow">
+                        Message sent<span class="blinking-cursor">_</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+
+<div class="lines">
+  <svg viewBox="0 0 1000 160" preserveAspectRatio="none" width="100%" height="160">
+    <path id="wave" d="M 0 80 Q 500 80 1000 80" stroke="white" stroke-width="1.5" fill="transparent" />
+  </svg>
+</div>
+
+<footer class="footer">
+        <div class="social-links">
+            <!-- GitHub Link - Paste your GitHub URL in the href below -->
+            <a href="https://github.com/sushil010" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+
+            <!-- LinkedIn Link - Paste your LinkedIn URL in the href below -->
+            <a href="https://www.linkedin.com/in/sushil-sharma-714924195" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-text">© 2025 Sushil Sharma. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="script.js"></script>
+</body>
+
+</html>
